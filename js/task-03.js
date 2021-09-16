@@ -23,7 +23,7 @@ imageItem.classList.add('gallery__item');
   imageEl.alt = el.alt;
   imageEl.width = 400;
   imageEl.classList.add('gallery__image');
-  // imageEl.style.padding = 10;
+  imageEl.style.marginLeft = '10px';
   // imageEl.style.display = 'block';
 
   // imageItem.append(imageEl);
@@ -36,6 +36,9 @@ list.style.listStyle = 'none';
 list.style.display = 'flex';
 list.style.flexWrap = 'wrap';
 list.style.justifyContent = 'center';
+list.style.paddingLeft = '0px';
+list.style.marginLeft = '-10px';
+list.style.alignItems = 'center';
 list.append(...imageElements);
 
 
