@@ -15,17 +15,14 @@ const images = [
 
 const imageElements = images.map(el => {
 const imageItem = document.createElement('li');
-imageItem.classList.add('gallery__item');
-
 
   const imageEl = document.createElement('img');
   imageEl.src = el.url;
   imageEl.alt = el.alt;
   imageEl.width = 400;
-  imageEl.classList.add('gallery__image');
   imageEl.style.marginLeft = '10px';
-
-  imageItem.insertAdjacentElement('afterbegin', imageEl)
+  imageItem.insertAdjacentHTML('afterbegin', `<img src=${imageEl.src} alt=${imageEl.alt} width=${imageEl.width}>`);
+  console.log(imageItem);
   return imageItem;
 });
 
