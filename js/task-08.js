@@ -25,16 +25,15 @@ function random() {
     return Math.round(Math.random() * 256);
 }
 
-const width = 30;
-const height = 30;
+const dimention = 30;
 
 function createBoxes(amount) {
     const boxes = [];
 
     for (let i = 0; i < amount; i += 1) {
         const box = document.createElement('div');
-        box.style.height = height + 10 *i +'px';
-        box.style.width = width + 10 * i + 'px';
+        box.style.height = dimention + 10 *i +'px';
+        box.style.width = dimention + 10 * i + 'px';
         box.style.marginBottom = '10px';
         box.style.backgroundColor = `rgb(${random()}, ${random()}, ${random()})`;
         
