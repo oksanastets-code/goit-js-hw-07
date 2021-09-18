@@ -3,23 +3,16 @@ const refs = {
     plusBtn: document.querySelector('[data-action="increment"]'),
     minusBtn: document.querySelector('[data-action="decrement"]'),
 };
-
 let total = Number(refs.counterValue.textContent);
 
 const increment = () => {
     total += 1;
+    refs.counterValue.textContent = total;
 };
-
-function decrement() {
+const decrement = () => {
     total -= 1;
+    refs.counterValue.textContent = total;
 };
 
-refs.plusBtn.addEventListener('click', function () {
-    increment();
-    refs.counterValue.textContent = total;
-});
-
-refs.minusBtn.addEventListener('click', function () {
-    decrement();
-    refs.counterValue.textContent = total;
-});
+refs.plusBtn.addEventListener('click', increment);
+refs.minusBtn.addEventListener('click', decrement);
