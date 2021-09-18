@@ -4,9 +4,9 @@ const quantityCategoriesMessage = `В списке ${categoriesItems.length} к�
 console.log(quantityCategoriesMessage);
 
 const message = categoriesItems.map(item => {
-const categoriesItemTitle = item.querySelector('h2');
+const categoriesItemTitle = item.firstElementChild;
 console.log('Категория:', categoriesItemTitle.textContent);
 
-const categoriesItemList = item.querySelector('ul');
+const categoriesItemList = item.lastElementChild;
 console.log('Количество элементов:', categoriesItemList.children.length);
 })
