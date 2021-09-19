@@ -14,19 +14,14 @@ const images = [
 ];
 
 const imageElements = images.map(el => {
-const imageItem = document.createElement('li');
-
-  const imageEl = document.createElement('img');
-  imageEl.src = el.url;
-  imageEl.alt = el.alt;
-  imageEl.width = 400;
-  imageEl.style.marginLeft = '10px';
-  imageItem.insertAdjacentHTML('afterbegin', `<img src=${imageEl.src} alt=${imageEl.alt} width=${imageEl.width}>`);
-  console.log(imageItem);
+  const imageItem = document.createElement('li');
+  imageItem.insertAdjacentHTML('afterbegin', `<img src=${el.url} alt=${el.alt} width = 400px>`);
+  imageItem.style.marginLeft = '10px';
   return imageItem;
 });
 
 const list = document.querySelector('#gallery');
+console.log(list.classList);
 list.style.listStyle = 'none';
 list.style.display = 'flex';
 list.style.flexWrap = 'wrap';
