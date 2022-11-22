@@ -1,10 +1,10 @@
 const ingredients = [
-  'Картошка',
-  'Грибы',
-  'Чеснок',
-  'Помидоры',
-  'Зелень',
-  'Приправы',
+  'Potato',
+  'Mushrooms',
+  'Garlic',
+  'Tomatoes',
+  'Green',
+  'Flavouring',
 ];
 
 const elements = ingredients.map(el => {
